@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pakistan Tax Calculator</title>
+        <link rel="stylesheet" type="text/css" href="../Tax/css/TaxCalculator.css"/>
+    </head>
+
+    <body>    
+
+        <header>
+            <nav class="navbar">
+                <span class="navbar-toggle" id="js-navbar-toggle">
+                    <img src="https://img.icons8.com/metro/26/000000/menu.png"/>
+                </span>
+                <h1><a class="homepage" href="index.html">Pakistan Tax Calculator</a></h1>
+                <ul class="main-nav" id="js-menu">
+                <li><a class="nav-links" href="index.html">Tax Calculator</a></li>
+                <li><a class="nav-links" href="tax-brackets.html">Tax Brackets</a></li>
+              </ul>
+            </nav>
+        </header> 
+
+        <main>
+            <h2 class="title">Pakistan Tax Calculator For The Fiscal Year 2019-2020</h2>
+            <section class="tab">
+                <button class="tablinks" onclick="openCalc(event, 'salaried')" id="defaultOpen">Salaried</button>
+                <button class="tablinks" onclick="openCalc(event, 'unsalaried')">Unsalaried</button> 
+                <button class="tablinks" onclick="openCalc(event, 'rental')">Rental</button> 
+            </section>
+            <section id="salaried" class="calculator">
+                <div class="row field-space">
+                    <label id="title-salaried" class="monthly-salary">Tax Calculator for Salaried Persons</label>
+                </div>
+
+                <div class="row field-space">
+                    <label class="monthly-salary column">Income:</label>
+                    <div class="column">
+                        <input id="monthly" class="income-monthly" name="select" type="radio" value="monthly" checked>
+                        <label for="monthly" class="income-monthly">Monthly</label>
+                        <input id="annual" class="income-annual" name="select" type="radio" value="annual">
+                        <label for="annual" class="income-annual">Annual</label>
+                    </div>
+                </div>
+                
+                <div class="row field-space">
+                    <label class="monthly-salary column">Enter Your Income:</label>
+                    <div class="column">
+                        <input id="income" class="salary" type="number" min="0" required>
+                        <button class="button" onclick="calcTaxSalary()">Calculate</button>
+                    </div>
+                </div>
+
+                <div class="row field-space">
+                    <label class="monthly-salary column">Monthly Income:</label>
+                    <output id="monthly-income" class="result column"></output>
+                </div>
+
+                <div class="row field-space">
+                    <label class="monthly-salary column">Monthly Tax:</label>
+                    <output id="monthly-tax" class="result column"></output>
+                </div>
+                
+                <div class="row field-space">
+                    <label class="monthly-salary column">Monthly Income After Tax:</label>
+                    <output id="salary-tax" class="result column"></output>
+                </div>
+                
+                <div class="row field-space">
+                    <label class="monthly-salary column">Annual Income:</label>
+                    <output id="yearly-income" class="result column"></output>
+                </div>
+                
+                <div class="row field-space">
+                    <label class="monthly-salary column">Annual Tax:</label>
+                    <output id="yearly-tax" class="result column"></output>
+                </div>
+                
+                <div class="row field-space">
+                    <label class="monthly-salary column">Annual Income After Tax:</label>
+                    <output id="yearly-post-tax" class="result column"></output>
+                </div>
+                
+                <div class="row field-space">
+                    <label class="monthly-salary column">Percentage of Annual Income:</label>
+                    <output id="percentage" class="result column"></output>
+                </div>
+            </section>
+            <section id="unsalaried" class="calculator">
+                <div class="row field-space">
+                    <label id="title-unsalaried" class="monthly-salary">Tax Calculator for Unsalaried Persons</label>
+                </div>
+
+                <div class="row field-space">
+                    <label class="monthly-salary column">Income:</label>
+                    <div class="column">
+                        <input id="monthly" class="income-monthly" name="select1" type="radio" value="monthly1" checked>
+                        <label for="monthly" class="income-monthly">Monthly</label>
+                        <input id="annual" class="income-annual" name="select1" type="radio" value="annual1">
+                        <label for="annual" class="income-annual">Annual</label>
+                    </div>
+                </div>
+
+                <div class="row field-space">
+                    <label class="monthly-salary column">Enter Your Income:</label>
+                    <div class="column">
+                        <input id="income-unsalaried" class="salary" type="number" min="0">
+                        <button class="button" onclick="calcTaxUnsalaried()">Calculate</button>
+                    </div>                    
+                </div>
+
+                <div class="row field-space">
+                    <label class="monthly-salary column">Monthly Income:</label>
+                    <output id="monthly-income-unsalaried" class="result column"></output>
+                </div>
+
+                <div class="row field-space">
+                    <label class="monthly-salary column">Monthly Tax:</label>
+                    <output id="monthly-tax-unsalaried" class="result column"></output>
+                </div>
+
+                <div class="row field-space">
+                    <label class="monthly-salary column">Monthly Income After Tax:</label>
+                    <output id="salary-tax-unsalaried" class="result column"></output>
+                </div>
+
+                <div class="row field-space">
+                    <label class="monthly-salary column">Annual Income:</label>
+                    <output id="yearly-income-unsalaried" class="result column"></output>
+                </div>
+
+                <div class="row field-space">
+                    <label class="monthly-salary column">Annual Tax:</label>
+                    <output id="yearly-tax-unsalaried" class="result column"></output>
+                </div>
+
+                <div class="row field-space">
+                    <label class="monthly-salary column">Annual Income After Tax:</label>
+                    <output id="yearly-post-tax-unsalaried" class="result column"></output>
+                </div>
+
+                <div class="row field-space">                    
+                    <label class="monthly-salary column">Percentage of Annual Income:</label>
+                    <output id="percentage-unsalaried" class="result column"></output>
+                </div>
+            </section>
+            <section id="rental" class="calculator">
+                <div class="row field-space">
+                    <label id="title-rental" class="monthly-salary">Tax Calculator for Rental Income</label>
+                </div>
+
+                <div class="row field-space">
+                    <label class="monthly-salary column">Income:</label>
+                    <div class="column">
+                        <input id="monthly" class="income-monthly" name="select2" type="radio" value="monthly2" checked>
+                        <label for="monthly" class="income-monthly">Monthly</label>
+                        <input id="annual" class="income-annual" name="select2" type="radio" value="annual2">
+                        <label for="annual" class="income-annual">Annual</label>
+                    </div>
+                </div>
+
+                <div class="row field-space">                    
+                    <label class="monthly-salary column">Enter Your Income:</label>
+                    <div class="column">
+                        <input id="income-rental" class="salary" type="number" min="0">
+                        <button class="button" onclick="calcTaxRental()">Calculate</button>
+                    </div>
+                </div>
+                
+                <div class="row field-space">
+                    <label class="monthly-salary column">Monthly Income:</label>
+                    <output id="monthly-income-rental" class="result column"></output>
+                </div>
+                
+                <div class="row field-space">
+                    <label class="monthly-salary column">Monthly Tax:</label>
+                    <output id="monthly-tax-rental" class="result column"></output>
+                </div>
+                
+                <div class="row field-space">
+                    <label class="monthly-salary column">Monthly Income After Tax:</label>
+                    <output id="salary-tax-rental" class="result column"></output>
+                </div>
+                
+                <div class="row field-space">
+                    <label class="monthly-salary column">Annual Income:</label>
+                    <output id="yearly-income-rental" class="result column"></output>
+                </div>
+                
+                <div class="row field-space">
+                    <label class="monthly-salary column">Annual Tax:</label>
+                    <output id="yearly-tax-rental" class="result column"></output>
+                </div>
+                
+                <div class="row field-space">
+                    <label class="monthly-salary column">Annual Income After Tax:</label>
+                    <output id="yearly-post-tax-rental" class="result column"></output>
+                </div>
+                
+                <div class="row field-space">
+                    <label class="monthly-salary column">Percentage of Annual Income:</label>
+                    <output id="percentage-rental" class="result column"></output>
+                </div>
+            </section>
+        </main>
+
+        <footer class="foot">
+            <p class="foot-link">
+                <a class="link" href="terms-and-conditions.html">Terms and Conditions</a>
+                <a class="link" href="privacy-policy.html"><em>Privacy Policy</em></a>
+                <a class="link" href="contact-us.html"><em>Contact Us</em></a>
+            </p>
+            <p class="copyright">&#169; Copyright - All Rights Reserved.</p>
+        </footer>
+        
+    </body>
+    
+    
+    <script src="../Tax/js/TaxCalculator.js"></script>
+</html>
