@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pakistan Tax Calculator</title>
+        <link rel="stylesheet" type="text/css" href="TaxCalculator.css" />
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <span class="navbar-toggle" id="js-navbar-toggle">
+                    <img src="https://img.icons8.com/metro/26/000000/menu.png"/>
+                </span>
+                <h1><a class="homepage" href="index.html">Pakistan Tax Calculator</a></h1>
+                <ul class="main-nav" id="js-menu">
+                <li><a class="nav-links" href="index.html">Tax Calculator</a></li>
+                <li><a class="nav-links" href="tax-brackets.html">Tax Brackets</a></li>
+              </ul>
+            </nav>
+        </header> 
+        <main>
+            <h2 class="title">Tax Brackets For Salaried Persons For Fiscal Year 2019-2020</h2>
+            <section class="tab">
+                <button class="tablinks1" onclick="openBrackets(event, 'taxable-income-salaried')" id="defaultOpen">Salaried</button>
+                <button class="tablinks1" onclick="openBrackets(event, 'taxable-income-unsalaried')" >Unsalaried</button> 
+                <button class="tablinks1" onclick="openBrackets(event, 'taxable-income-rental')" >Rental</button> 
+            </section>
+            <section id="taxable-income-salaried" class="taxable-income">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan ="2">
+                                <h2>Salaried Individuals</h2>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <h2>Taxable Income</h2>
+                            </th>
+                            <th>
+                                <h2>Tax Rate</h2>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><h3>Where the taxable income does not exceed PKR 600,000.</h3></td>
+                            <td><h3>0%</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 600,000 but does not exceed PKR 1,200,000.</h3></td>
+                            <td><h3>5% of the amount exceeding PKR 600,000</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 1,200,000 but does not exceed PKR 1,800,000.</h3></td>
+                            <td><h3>PKR 30,000 + 10% of the amount exceeding PKR 1,200,000</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 1,800,000 but does not exceed PKR 2,500,000.</h3></td>
+                            <td><h3>PKR 90,000 + 15% of the amount exceeding PKR 1,800,000.</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 2,500,000 but does not exceed PKR 3,500,000.</h3></td>
+                            <td><h3>PKR 195,000 + 17.5% of the amount exceeding PKR 2,500,000.</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 3,500,000 but does not exceed PKR 5,000,000.</h3></td>
+                            <td><h3>PKR 370,000 + 20% of the amount exceeding PKR 3,500,000.</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 5,000,000 but does not exceed PKR 8,000,000.</h3></td>
+                            <td><h3>PKR 670,000 + 22.5% of the amount exceeding PKR 5,000,000.</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 8,000,000 but does not exceed PKR 12,000,000.</h3></td>
+                            <td><h3>PKR 1,345,000 + 25% of the amount exceeding PKR 8,000,000.</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 12,000,000 but does not exceed PKR 30,000,000.</h3></td>
+                            <td><h3>PKR 2,345,000 + 27.5% of the amount exceeding PKR 12,000,000.</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 30,000,000 but does not exceed PKR 50,000,000.</h3></td>
+                            <td><h3>PKR 7,295,000 + 30% of the amount exceeding PKR 30,000,000.</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 50,000,000 but does not exceed PKR 75,000,000.</h3></td>
+                            <td><h3>PKR 13,295,000 + 32.5% of the amount exceeding PKR 50,000,000.</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 75,000,000.</h3></td>
+                            <td><h3>PKR 21,420,000 + 35% of the amount exceeding PKR 75,000,000.</h3></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="taxable-income-unsalaried" class="taxable-income">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan ="2">
+                                <h2>Unsalaried Individuals</h2>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <h2>Taxable Income</h2>
+                            </th>
+                            <th>
+                                <h2>Tax Rate</h2>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><h3>Where the taxable income does not exceed PKR 400,000.</h3></td>
+                            <td><h3>0%</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 400,000 but does not exceed PKR 600,000.</h3></td>
+                            <td><h3>5% of the amount exceeding PKR 400,000</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 600,000 but does not exceed PKR 1,200,000.</h3></td>
+                            <td><h3>PKR 10,000 + 10% of the amount exceeding PKR 600,000</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 1,200,000 but does not exceed PKR 2,400,000.</h3></td>
+                            <td><h3>PKR 70,000 + 15% of the amount exceeding PKR 1,200,000.</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 2,400,000 but does not exceed PKR 3,000,000.</h3></td>
+                            <td><h3>PKR 250,000 + 20% of the amount exceeding PKR 2,400,000.</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 3,000,000 but does not exceed PKR 4,000,000.</h3></td>
+                            <td><h3>PKR 370,000 + 25% of the amount exceeding PKR 3,000,000.</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 4,000,000 but does not exceed PKR 6,000,000.</h3></td>
+                            <td><h3>PKR 620,000 + 30% of the amount exceeding PKR 4,000,000.</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 6,000,000.</h3></td>
+                            <td><h3>PKR 1,220,000 + 35% of the amount exceeding PKR 6,000,000.</h3></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="taxable-income-rental" class="taxable-income">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan ="2">
+                                <h2>Rental Income</h2>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <h2>Taxable Income</h2>
+                            </th>
+                            <th>
+                                <h2>Tax Rate</h2>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><h3>Where the taxable income does not exceed PKR 200,000.</h3></td>
+                            <td><h3>0%</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 200,000 but does not exceed PKR 600,000.</h3></td>
+                            <td><h3>5% of the amount exceeding PKR 200,000</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 600,000 but does not exceed PKR 1,200,000.</h3></td>
+                            <td><h3>PKR 20,000 + 10% of the amount exceeding PKR 600,000</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 1,000,000 but does not exceed PKR 2,000,000.</h3></td>
+                            <td><h3>PKR 60,000 + 15% of the amount exceeding PKR 1,000,000.</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 2,000,000 but does not exceed PKR 4,000,000.</h3></td>
+                            <td><h3>PKR 210,000 + 20% of the amount exceeding PKR 2,000,000.</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 4,000,000 but does not exceed PKR 6,000,000.</h3></td>
+                            <td><h3>PKR 610,000 + 25% of the amount exceeding PKR 4,000,000.</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 6,000,000 but does not exceed PKR 8,000,000.</h3></td>
+                            <td><h3>PKR 1,110,000 + 30% of the amount exceeding PKR 6,000,000.</h3></td>
+                        </tr>
+                        <tr>
+                            <td><h3>Where the taxable income exceeds PKR 8,000,000.</h3></td>
+                            <td><h3>PKR 1,710,000 + 35% of the amount exceeding PKR 8,000,000.</h3></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer class="foot">
+            <p class="foot-link">
+                <a class="link" href="terms-and-conditions.html">Terms and Conditions</a>
+                <a class="link" href="privacy-policy.html"><em>Privacy Policy</em></a>
+                <a class="link" href="contact-us.html"><em>Contact Us</em></a></p>
+            <p class="copyright">&#169; Copyright - All Rights Reserved.</p>
+        </footer>
+    </body>
+    
+    
+    <script src="TaxCalculator.js"></script>
+</html>
