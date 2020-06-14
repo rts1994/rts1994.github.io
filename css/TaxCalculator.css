@@ -132,6 +132,29 @@ header .active {
   .homepage { 
     font-size: 18px; 
   }
+  
+  .text-container { 
+    padding: 40px; 
+  }
+
+  p { 
+    font-size: 16px; 
+    }
+
+  .privacy { 
+    font-size: 16px; 
+  }
+
+  .copyright {
+    font-size: 16px;
+  }
+
+  td, th { 
+   width: 200px; 
+ 
+  }
+
+
 }
 
 .copyright {
@@ -204,7 +227,11 @@ td {
   border-bottom: 1px solid #ddd;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
+}
+
+td, th { 
   max-width: 470px;
+  width: 50%; 
   padding: 10px; 
 }
 
@@ -363,17 +390,23 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .privacy {
-    font-size: 21.2px;
+    font-size: 16px;
     text-align: justify;
 }
 
 .text-container { 
   max-width: 1000px; 
+  width: 100%; 
+  padding: 40px; 
   margin: 0 auto; 
 }
 
 .text-container p { 
   text-align: justify;
+}
+
+.privacy { 
+  padding: 40px; 
 }
 
 .title{
