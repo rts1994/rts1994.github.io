@@ -110,7 +110,7 @@ header .active {
 }
 
 @media screen and (max-width: 610px) { 
-  button.tablinks, button.tablinks { 
+  button.tablinks, button.tablinks1 { 
     font-size: 12px; 
     max-width: 100px; 
     color: #fff;
