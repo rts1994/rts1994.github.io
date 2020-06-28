@@ -1,26 +1,5 @@
 document.getElementById("defaultOpen").click();
 
-document.getElementById("income").addEventListener( "keydown", function( e ) {
-    var keyCode = e.keyCode || e.which;
-    if ( keyCode === 13 ) {
-       calcTaxSalary();
-    }
-}, false);
-
-document.getElementById("income-unsalaried").addEventListener( "keydown", function( e ) {
-    var keyCode = e.keyCode || e.which;
-    if ( keyCode === 13 ) {
-       calcTaxUnsalaried();
-    }
-}, false);
-
-document.getElementById("income-rental").addEventListener( "keydown", function( e ) {
-    var keyCode = e.keyCode || e.which;
-    if ( keyCode === 13 ) {
-       calcTaxRental();
-    }
-}, false);
-
 var formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'PKR',
@@ -242,7 +221,26 @@ function openBrackets(evt, taxBrackets) {
     evt.currentTarget.className += " active";
 }
 
+document.getElementById("income").addEventListener( "keydown", function( e ) {
+    var keyCode = e.keyCode || e.which;
+    if ( keyCode === 13 ) {
+       calcTaxSalary();
+    }
+}, false);
 
+document.getElementById("income-unsalaried").addEventListener( "keydown", function( e ) {
+    var keyCode = e.keyCode || e.which;
+    if ( keyCode === 13 ) {
+       calcTaxUnsalaried();
+    }
+}, false);
+
+document.getElementById("income-rental").addEventListener( "keydown", function( e ) {
+    var keyCode = e.keyCode || e.which;
+    if ( keyCode === 13 ) {
+       calcTaxRental();
+    }
+}, false);
 
 
 
